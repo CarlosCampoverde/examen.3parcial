@@ -18,4 +18,8 @@ jobs:
           node-version: 20
       - run: npm install
       
-      - run: npm test -- --coverage
+      - name: Run linting
+        run: npm run lint
+      
+      - name: Run tests with coverage
+        run: npm test
